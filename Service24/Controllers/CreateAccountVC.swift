@@ -11,8 +11,6 @@ import Alamofire
 
 class CreateAccountVC: ViewController {
     
-    let basisURL = "http://95.213.195.115"
-    
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
     @IBOutlet weak var registrationButtonBottomConstraint: NSLayoutConstraint!
@@ -20,13 +18,8 @@ class CreateAccountVC: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTextField.returnKeyType = UIReturnKeyType.next
-        passwordTextField.returnKeyType = UIReturnKeyType.done
-        
         emailTextField.textFieldDelegate = self
         passwordTextField.textFieldDelegate = self
-        
-        closeKeyboardWhenTapped()
     }
     
     
@@ -42,7 +35,9 @@ class CreateAccountVC: ViewController {
             
             let parameters: Parameters = ["email": email, "password": password]
             
-            Alamofire.request(basisURL + url, method: .post, parameters: parameters).responseJSON(completionHandler: { response in
+            sendRequest(method: .post, url: url, parameters: parameters, headers: nil, com: { (response) in
+                
+                print("============= REGISTER USER =============")
                 print("Request: \(String(describing: response.request))")
                 print("Response: \(String(describing: response.response))")
                 print("Result: \(response.result)")
@@ -55,7 +50,7 @@ class CreateAccountVC: ViewController {
                 } else if statusCode == validationFailed {
                     self.showAlert(withTitle: "Не Успешно")
                 }
-            })   
+            })
         }
         dissmisKeyboard()
     }
@@ -70,6 +65,7 @@ extension CreateAccountVC: CustomTextFieldDelegate {
     
     func pushButton(height: CGFloat) {
         registrationButtonBottomConstraint.constant = height
+        self.view.layoutIfNeeded()
     }
     
     func goToNextField() {

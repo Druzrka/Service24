@@ -31,8 +31,11 @@ class TextField: UITextField, UITextFieldDelegate {
         
         self.delegate = self
         
-        let borderColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.2)
-        setBorder(cornerRadius: 5, borderWidth: 1, borderColor: borderColor.cgColor)
+        if tag < 2 {
+            let borderColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.2)
+            setBorder(cornerRadius: 5, borderWidth: 1, borderColor: borderColor.cgColor)
+            
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -83,7 +86,9 @@ class TextField: UITextField, UITextFieldDelegate {
     }
     
     func setPlaceHolderTextColor(color: UIColor) {
-        attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName : color])
+        if placeholder != nil {
+            attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSAttributedStringKey.foregroundColor : color])
+        }
     }
     
     func updatePadding() {
@@ -94,7 +99,7 @@ class TextField: UITextField, UITextFieldDelegate {
         leftView = view
     }
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height

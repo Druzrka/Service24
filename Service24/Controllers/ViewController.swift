@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
+    
+    let basisURL = "http://95.213.195.115"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func dissmisKeyboard() {
+    @objc func dissmisKeyboard() {
         view.endEditing(true)
     }
     
@@ -74,5 +77,24 @@ class ViewController: UIViewController {
         alert.addAction(action)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func sendRequest(method: HTTPMethod, url: String, parameters: Parameters?, headers: HTTPHeaders?, com: @escaping (DataResponse<Any>) -> ()) {
+    
+        if headers == nil {
+            Alamofire.request(basisURL + url, method: method, parameters: parameters).responseJSON { (response) in
+                com(response)
+            }
+            
+        } else if parameters == nil {
+            Alamofire.request(basisURL + url, method: method, headers: headers).responseJSON { (response) in
+                com(response)
+            }
+            
+        } else {
+            Alamofire.request(basisURL + url, method: method, parameters: parameters, headers: headers).responseJSON { (response) in
+                com(response)
+            }
+        }
     }
 }

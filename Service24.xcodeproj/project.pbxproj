@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		15F543EAFEF7ECE69B7FACE8 /* Pods_Service24UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD6CB7C168F4125F456709 /* Pods_Service24UITests.framework */; };
 		8F719B1E460586D0067DAD7D /* Pods_Service24Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D3A5EA2A5CCEA89FE6373 /* Pods_Service24Tests.framework */; };
+		A51A998F1F7AF48D00E9ED58 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51A998E1F7AF48D00E9ED58 /* CarCell.swift */; };
+		A51D167F1F7D3C160099C9B0 /* TextFieldForProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D167E1F7D3C160099C9B0 /* TextFieldForProfile.swift */; };
 		A51D8BD31F57E69C00938C1D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D8BD21F57E69C00938C1D /* TextField.swift */; };
 		A51F74301F66FD26009B25D0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F742F1F66FD26009B25D0 /* ForgotPasswordVC.swift */; };
+		A51F8C2F1F7A4CCD009152F7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F8C2E1F7A4CCD009152F7 /* Person.swift */; };
+		A51F8C311F7A51AA009152F7 /* CarListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F8C301F7A51AA009152F7 /* CarListVC.swift */; };
+		A51F8C331F7A56BC009152F7 /* ButtonWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F8C321F7A56BC009152F7 /* ButtonWithBorder.swift */; };
+		A51F8C371F7A6F78009152F7 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F8C361F7A6F78009152F7 /* Car.swift */; };
 		A525B86B1F6FD5BB00C47CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525B86A1F6FD5BB00C47CDF /* ViewController.swift */; };
 		A54934501F582C310054A33E /* HuxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549344F1F582C310054A33E /* HuxColor.swift */; };
 		A55BEB8A1F5558BA00226AF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BEB891F5558BA00226AF9 /* AppDelegate.swift */; };
@@ -21,6 +27,7 @@
 		A55BEBAA1F5558BB00226AF9 /* Service24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BEBA91F5558BB00226AF9 /* Service24UITests.swift */; };
 		A5752B731F693BDB00CAFF13 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5752B721F693BDB00CAFF13 /* NavigationBar.swift */; };
 		A5752B751F6947C600CAFF13 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5752B741F6947C600CAFF13 /* CreateAccountVC.swift */; };
+		A5D968771F7BB4DD00A510D9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D968761F7BB4DD00A510D9 /* ProfileVC.swift */; };
 		A5DD57801F58580000B92162 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD577F1F58580000B92162 /* LoginVC.swift */; };
 		EDE170F8415A7F11EA78428D /* Pods_Service24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875B9E1784AD9D9177CA9C79 /* Pods_Service24.framework */; };
 /* End PBXBuildFile section */
@@ -48,10 +55,16 @@
 		82159B8CF5C2E675A9A74691 /* Pods-Service24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service24.release.xcconfig"; path = "Pods/Target Support Files/Pods-Service24/Pods-Service24.release.xcconfig"; sourceTree = "<group>"; };
 		875B9E1784AD9D9177CA9C79 /* Pods_Service24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Service24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9392D684926ED4013E093FD9 /* Pods-Service24Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service24Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Service24Tests/Pods-Service24Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A51D8BD21F57E69C00938C1D /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = Constants/TextField.swift; sourceTree = "<group>"; };
-		A51F742F1F66FD26009B25D0 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordVC.swift; path = ViewControllers/ForgotPasswordVC.swift; sourceTree = "<group>"; };
-		A525B86A1F6FD5BB00C47CDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
-		A549344F1F582C310054A33E /* HuxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HuxColor.swift; path = Constants/HuxColor.swift; sourceTree = "<group>"; };
+		A51A998E1F7AF48D00E9ED58 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarCell.swift; path = View/CarCell.swift; sourceTree = "<group>"; };
+		A51D167E1F7D3C160099C9B0 /* TextFieldForProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldForProfile.swift; path = View/TextFieldForProfile.swift; sourceTree = "<group>"; };
+		A51D8BD21F57E69C00938C1D /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = View/TextField.swift; sourceTree = "<group>"; };
+		A51F742F1F66FD26009B25D0 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordVC.swift; path = Controllers/ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		A51F8C2E1F7A4CCD009152F7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Model/Person.swift; sourceTree = "<group>"; };
+		A51F8C301F7A51AA009152F7 /* CarListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarListVC.swift; path = Controllers/CarListVC.swift; sourceTree = "<group>"; };
+		A51F8C321F7A56BC009152F7 /* ButtonWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonWithBorder.swift; path = View/ButtonWithBorder.swift; sourceTree = "<group>"; };
+		A51F8C361F7A6F78009152F7 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Model/Car.swift; sourceTree = "<group>"; };
+		A525B86A1F6FD5BB00C47CDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		A549344F1F582C310054A33E /* HuxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HuxColor.swift; path = View/HuxColor.swift; sourceTree = "<group>"; };
 		A55BEB861F5558BA00226AF9 /* Service24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Service24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55BEB891F5558BA00226AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55BEB8E1F5558BA00226AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,9 +77,10 @@
 		A55BEBA51F5558BB00226AF9 /* Service24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Service24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55BEBA91F5558BB00226AF9 /* Service24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service24UITests.swift; sourceTree = "<group>"; };
 		A55BEBAB1F5558BB00226AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5752B721F693BDB00CAFF13 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = Constants/NavigationBar.swift; sourceTree = "<group>"; };
-		A5752B741F6947C600CAFF13 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountVC.swift; path = ViewControllers/CreateAccountVC.swift; sourceTree = "<group>"; };
-		A5DD577F1F58580000B92162 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ViewControllers/LoginVC.swift; sourceTree = "<group>"; };
+		A5752B721F693BDB00CAFF13 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = View/NavigationBar.swift; sourceTree = "<group>"; };
+		A5752B741F6947C600CAFF13 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountVC.swift; path = Controllers/CreateAccountVC.swift; sourceTree = "<group>"; };
+		A5D968761F7BB4DD00A510D9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileVC.swift; path = Controllers/ProfileVC.swift; sourceTree = "<group>"; };
+		A5DD577F1F58580000B92162 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Controllers/LoginVC.swift; sourceTree = "<group>"; };
 		A61DCCCC27AACF735BB87B5E /* Pods-Service24UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service24UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Service24UITests/Pods-Service24UITests.release.xcconfig"; sourceTree = "<group>"; };
 		E36FB80A014C5BF0815566DE /* Pods-Service24UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service24UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Service24UITests/Pods-Service24UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2EC614671AA59578A06951C /* Pods-Service24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service24.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Service24/Pods-Service24.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,25 +115,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A54934511F58575C0054A33E /* ViewControllers */ = {
+		A54934511F58575C0054A33E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				A5DD577F1F58580000B92162 /* LoginVC.swift */,
 				A51F742F1F66FD26009B25D0 /* ForgotPasswordVC.swift */,
 				A5752B741F6947C600CAFF13 /* CreateAccountVC.swift */,
 				A525B86A1F6FD5BB00C47CDF /* ViewController.swift */,
+				A51F8C301F7A51AA009152F7 /* CarListVC.swift */,
+				A5D968761F7BB4DD00A510D9 /* ProfileVC.swift */,
 			);
-			name = ViewControllers;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		A54934521F5857770054A33E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		A549EE681F78FD76003CEC64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A51A998E1F7AF48D00E9ED58 /* CarCell.swift */,
 				A51D8BD21F57E69C00938C1D /* TextField.swift */,
 				A549344F1F582C310054A33E /* HuxColor.swift */,
 				A5752B721F693BDB00CAFF13 /* NavigationBar.swift */,
+				A51F8C321F7A56BC009152F7 /* ButtonWithBorder.swift */,
+				A51D167E1F7D3C160099C9B0 /* TextFieldForProfile.swift */,
 			);
-			name = Constants;
+			name = View;
+			sourceTree = "<group>";
+		};
+		A549EE691F78FD7D003CEC64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A51F8C2E1F7A4CCD009152F7 /* Person.swift */,
+				A51F8C361F7A6F78009152F7 /* Car.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A55BEB7D1F5558BA00226AF9 = {
@@ -148,7 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				A54934521F5857770054A33E /* Constants */,
-				A54934511F58575C0054A33E /* ViewControllers */,
+				A549EE691F78FD7D003CEC64 /* Model */,
+				A549EE681F78FD76003CEC64 /* View */,
+				A54934511F58575C0054A33E /* Controller */,
 				A55BEB891F5558BA00226AF9 /* AppDelegate.swift */,
 				A55BEB8D1F5558BA00226AF9 /* Main.storyboard */,
 				A55BEB901F5558BA00226AF9 /* Assets.xcassets */,
@@ -271,23 +308,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Захар";
 				TargetAttributes = {
 					A55BEB851F5558BA00226AF9 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4X87RCYLED;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					A55BEB991F5558BA00226AF9 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = E7AZW33UG9;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A55BEB851F5558BA00226AF9;
 					};
 					A55BEBA41F5558BB00226AF9 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = E7AZW33UG9;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A55BEB851F5558BA00226AF9;
 					};
@@ -483,14 +523,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51A998F1F7AF48D00E9ED58 /* CarCell.swift in Sources */,
 				A51D8BD31F57E69C00938C1D /* TextField.swift in Sources */,
+				A51D167F1F7D3C160099C9B0 /* TextFieldForProfile.swift in Sources */,
+				A5D968771F7BB4DD00A510D9 /* ProfileVC.swift in Sources */,
 				A54934501F582C310054A33E /* HuxColor.swift in Sources */,
+				A51F8C371F7A6F78009152F7 /* Car.swift in Sources */,
 				A55BEB8A1F5558BA00226AF9 /* AppDelegate.swift in Sources */,
 				A51F74301F66FD26009B25D0 /* ForgotPasswordVC.swift in Sources */,
 				A5752B751F6947C600CAFF13 /* CreateAccountVC.swift in Sources */,
 				A5DD57801F58580000B92162 /* LoginVC.swift in Sources */,
+				A51F8C2F1F7A4CCD009152F7 /* Person.swift in Sources */,
 				A525B86B1F6FD5BB00C47CDF /* ViewController.swift in Sources */,
+				A51F8C331F7A56BC009152F7 /* ButtonWithBorder.swift in Sources */,
 				A5752B731F693BDB00CAFF13 /* NavigationBar.swift in Sources */,
+				A51F8C311F7A51AA009152F7 /* CarListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +602,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -563,7 +612,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -586,7 +639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -606,7 +659,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -614,7 +669,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -631,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -651,7 +710,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Service24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -666,7 +726,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Service24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -681,7 +742,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Service24Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Service24.app/Service24";
 			};
 			name = Debug;
@@ -697,7 +759,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Service24Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Service24.app/Service24";
 			};
 			name = Release;
@@ -712,7 +775,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Service24UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Service24;
 			};
 			name = Debug;
@@ -727,7 +791,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Service24UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Service24;
 			};
 			name = Release;

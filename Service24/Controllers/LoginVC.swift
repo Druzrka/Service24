@@ -11,13 +11,13 @@ import Alamofire
 
 class LoginVC: ViewController {
     
-    let basisURL = "http://95.213.195.115"
-    
     var keyboardHeight: CGFloat = 0
 
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextFIeld: TextField!
     @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
+    
+    let person = Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,6 @@ class LoginVC: ViewController {
         
         emailTextField.textFieldDelegate = self
         passwordTextFIeld.textFieldDelegate = self
-        
-        closeKeyboardWhenTapped()
-        
-        emailTextField.returnKeyType = UIReturnKeyType.next
-        passwordTextFIeld.returnKeyType = UIReturnKeyType.done
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
@@ -65,8 +60,10 @@ class LoginVC: ViewController {
             let invalidCredentials = 401
             let url = "/api/authenticate"
             let parameters: Parameters = ["email": email, "password": password]
-        
-            Alamofire.request(basisURL + url, method: .post, parameters: parameters).responseJSON(completionHandler: { response in
+            
+            sendRequest(method: .post, url: url, parameters: parameters, headers: nil, com: { (response) in
+                
+                print("============= LOGIN =============")
                 print("Request: \(String(describing: response.request))")
                 print("Response: \(String(describing: response.response))")
                 print("Result: \(response.result)")
@@ -76,8 +73,14 @@ class LoginVC: ViewController {
                 if statusCode == OK {
                     if let json = response.result.value {
                         let response = json as! NSDictionary
-                        print(response.object(forKey: "token")!)
-                        self.showAlert(withTitle: "Успешно")
+                        
+                        if let token = response.object(forKey: "token")! as? String {
+                            self.person.token = token
+                            self.person.email = email
+                            print("token: ", self.person.token)
+                        }
+                        //                        self.showAlert(withTitle: "Успешно")
+                        self.goToNextVC()
                     }
                     
                 } else if statusCode == invalidCredentials {
@@ -90,12 +93,24 @@ class LoginVC: ViewController {
         }
         dissmisKeyboard()
     }
+    
+    func goToNextVC() {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "CarListVC") as! CarListVC
+        
+        newViewController.person = person
+        
+        self.present(newViewController, animated: true, completion: nil)
+    }
 }
 
 extension LoginVC: CustomTextFieldDelegate {
     
     func pushButton(height: CGFloat) {
-        buttonBottomConstraint.constant = height
+        
+        self.buttonBottomConstraint.constant = height
+        self.view.layoutIfNeeded()
     }
     
     func goToNextField() {
